@@ -1,5 +1,5 @@
 <template>
-  <button class="elevated-button">
+  <button class="elevated-button" @click="onClick">
     {{ buttonText }}
     <component v-if="icon" :is="icon" class="icon"></component>
   </button>
@@ -16,6 +16,7 @@
     border-radius: 24px;
     color: #fff;
     cursor: pointer;
+    min-height: 40px;
     transition: all 0.3s;
     &:focus {
       background: #224dba;
@@ -38,9 +39,15 @@
         type: Object,
         require: false,
       },
+      onClickEvent: {
+        type: Function,
+        required: true,
+      },
     },
-    mounted() {
-      console.log(this.icon);
+    methods: {
+      onClick() {
+        this.onClickEvent();
+      },
     },
   };
 </script>

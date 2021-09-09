@@ -1,6 +1,7 @@
 <template>
   <div class="card">
     <div class="card__content">
+      <!-- <v-lazy-image class="card__image" :src="cardInformation.image" /> -->
       <img class="card__image" :src="cardInformation.image" />
       <h2 class="card__title">Title</h2>
       <p class="card__text">{{ cardInformation.text }}</p>
@@ -89,6 +90,7 @@
 <script>
   import heatIcon from '@/assets/images/heart_icon.svg';
   import tagsComponent from '@/components/tags.component.vue';
+  // import VLazyImage from 'v-lazy-image';
   export default {
     name: 'cardComponent',
     components: { heatIcon, tagsComponent },

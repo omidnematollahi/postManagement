@@ -53,5 +53,8 @@ export default {
       });
       this.posts = this.posts.slice(0, this.limit);
     },
+    onClickEvent() {
+      this.$router.push({ path: '/newPost' });
+    },
   },
 };

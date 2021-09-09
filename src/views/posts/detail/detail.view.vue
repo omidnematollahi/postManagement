@@ -1,9 +1,6 @@
 <template>
-  <div></div>
+  <div>detail page</div>
 </template>
 
-<script>
-  export default {
-    name: 'post-detail',
-  };
-</script>
+<style lang="scss" scoped src="./detail.view.scss"></style>
+<script src="./detail.view.js"></script>
