@@ -1,0 +1,23 @@
+.post-list {
+    display: flex;
+    flex-direction: column;
+    $self: &;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        #{ $self }__search {}
+
+        #{ $self }__new-post {}
+    }
+
+    &__content {
+        --w: 250px;
+        --n: 4;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(clamp(100%/(5) + 0.1%, 250px, 100%), 1fr));
+        gap: 10px;
+    }
+}
