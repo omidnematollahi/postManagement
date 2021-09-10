@@ -7,13 +7,18 @@
       <tags-component :tag-list="cardInformation.tags"></tags-component>
     </div>
     <div class="card__footer">
-      <div class="card__user">
-        <img class="card__avatar" :src="cardInformation.user.avatar" :alt="cardInformation.user.avatar" />
+      <div class="card__user" v-if="cardInformation.user">
+        <img
+          class="card__avatar"
+          :src="cardInformation.user ? cardInformation.user.avatar : '@/assets/images/img_avatar.png'"
+          :alt="cardInformation.user ? cardInformation.user.avatar : '@/assets/images/img_avatar.png'"
+        />
         <div class="card__user-info">
           <h6>{{ cardInformation.user.firstName }} {{ cardInformation.user.lastName }}</h6>
           <span>{{ cardInformation.publishDate }}</span>
         </div>
       </div>
+      <div v-else>{{ cardInformation.publishDate }}</div>
       <div class="card__likes">
         <span class="card__likes-count">{{ cardInformation.likes }}</span>
         <heatIcon />
@@ -30,6 +35,7 @@
     border: 1px solid #e7e7e7;
     border-radius: 4px;
     padding: 12px;
+    cursor: pointer;
 
     &__content {
       #{ $self }__image {

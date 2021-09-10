@@ -42,7 +42,6 @@ export default {
         if (bottomOfWindow) {
           this.posts.push(...this.allPosts.slice(this.lastIndex, this.lastIndex + this.limit));
           this.lastIndex += this.limit - 1;
-          console.log(this.lastIndex);
         }
       };
     },
@@ -55,6 +54,9 @@ export default {
     },
     onClickEvent() {
       this.$router.push({ path: '/newPost' });
+    },
+    goToDetail(id) {
+      this.$router.push({ name: 'PostDetail', query: { id: id } });
     },
   },
 };

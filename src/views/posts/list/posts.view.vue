@@ -9,7 +9,12 @@
       ></button-component>
     </div>
     <div class="post-list__content">
-      <card-component v-for="(post, index) in posts" :key="index" :cardInformation="post"></card-component>
+      <card-component
+        v-for="(post, index) in posts"
+        :key="index"
+        :cardInformation="post"
+        @click.native="goToDetail(post.id)"
+      ></card-component>
     </div>
   </div>
 </template>

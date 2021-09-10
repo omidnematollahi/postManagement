@@ -20,3 +20,10 @@ export const addPost = (model) => {
     data: model,
   });
 };
+
+export const postDetail = (id) => {
+  return axios({
+    method: 'GET',
+    url: '/posts/' + id,
+  });
+};

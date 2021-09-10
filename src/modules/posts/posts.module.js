@@ -43,6 +43,12 @@ export default {
         return response.data;
       });
     },
+    async postDetail(_, id) {
+      return PostsHttp.postDetail(id).then((response) => {
+        response.data.publishDate = dateFormatter(response.data.publishDate);
+        return response.data;
+      });
+    },
     async addPost(_, data) {
       return PostsHttp.addPost(data).then((response) => {
         if (response.status == 201 || response.status == 200) {
