@@ -21,11 +21,6 @@ export default {
         state[name] = value;
       }
     },
-
-    // eslint-disable-next-line no-unused-vars
-    resetState(state) {
-      state = JSON.parse(JSON.stringify(DEFAULT_STATE));
-    },
   },
 
   // Actions

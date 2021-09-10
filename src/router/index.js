@@ -12,12 +12,12 @@ const routes = [
   {
     path: '/detail',
     name: 'PostDetail',
-    component: () => import(/* webpackChunkName: "post list" */ '../views/posts/detail/detail.view.vue'),
+    component: () => import(/* webpackChunkName: "post deatail" */ '../views/posts/detail/detail.view.vue'),
   },
   {
     path: '/newPost',
     name: 'newPost',
-    component: () => import(/* webpackChunkName: "post list" */ '../views/posts/add/add.view.vue'),
+    component: () => import(/* webpackChunkName: "post add" */ '../views/posts/add/add.view.vue'),
   },
 ];
 
