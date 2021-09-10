@@ -33,6 +33,12 @@
       border: 1px solid #e7e7e7;
       border-radius: 8px;
       padding: 6px 12px;
+      &:hover {
+        border-color: #9d9d9d;
+      }
+      &:focus {
+        border-color: #9d9d9d;
+      }
     }
     label {
       font-weight: 500;

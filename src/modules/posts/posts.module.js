@@ -45,7 +45,9 @@ export default {
     },
     async addPost(_, data) {
       return PostsHttp.addPost(data).then((response) => {
-        console.log(response);
+        if (response.status == 201 || response.status == 200) {
+          this._vm.$toast.success('post published');
+        } else this._vm.$toast.error('An error occurred! please try agian later :)');
       });
     },
   },

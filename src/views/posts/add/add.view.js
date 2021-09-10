@@ -27,7 +27,6 @@ export default {
       addPost: 'PostsModule/addPost',
     }),
     onClickEvent() {
-      console.log(this.form.tags);
       this.addPost(this.form);
     },
   },
