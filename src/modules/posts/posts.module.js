@@ -43,5 +43,10 @@ export default {
         return response.data;
       });
     },
+    async addPost(_, data) {
+      return PostsHttp.addPost(data).then((response) => {
+        console.log(response);
+      });
+    },
   },
 };

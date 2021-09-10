@@ -71,6 +71,7 @@
       cursor: pointer;
       &.focused {
         color: #4f73d0;
+        font-weight: bold;
         svg {
           fill: #4f73d0 !important;
           path {

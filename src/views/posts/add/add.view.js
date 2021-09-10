@@ -3,6 +3,7 @@ import fieldInputComponent from '@/components/field-input.component.vue';
 import textareaComponent from '@/components/textarea.component.vue';
 import tagsInputComponent from '@/components/tags-input.component.vue';
 import backIcon from '@/assets/images/back_icon.svg';
+import { mapActions } from 'vuex';
 export default {
   name: 'add',
   components: {
@@ -22,8 +23,12 @@ export default {
     };
   },
   methods: {
+    ...mapActions({
+      addPost: 'PostsModule/addPost',
+    }),
     onClickEvent() {
       console.log(this.form.tags);
+      this.addPost(this.form);
     },
   },
 };

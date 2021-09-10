@@ -13,3 +13,10 @@ export const getPosts = (model) => {
     url: '/posts' + params,
   });
 };
+export const addPost = (model) => {
+  return axios({
+    method: 'POST',
+    url: '/posts',
+    data: model,
+  });
+};
